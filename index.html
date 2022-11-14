@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container-fluid bg-primary">
+        <div class="container py-3 ms-5 ps-5">
+            <div class="row d-flex justify-content-between  ms-5 ps-5">
+                <div class="col-2">
+                    <p class="my-auto text-light">Your online store</p>
+                </div>
+                <div class="col-1">
+                    <i class="my-auto fs-4 fa-solid fa-cart-shopping text-white"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-white my-0 py-0">
+        <div class="container py-4">
+            <div class="row d-flex justify-content-center">
+                <div class="col-3">
+                    <a class="h6 link-secondary" href="">REVIEW</a>
+                    <i class="mx-1 fa-solid fa-forward"></i>
+                    <a class="h6 link-dark" href="">ORDER</a>
+                    <i class="mx-1 fa-solid fa-forward"></i>
+                    <a class="h6 link-secondary" href="">PAYMENT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-light my-0 pt-0 pb-4">
+        <div class="container ms-5 ps-5">
+            <div class="row justify-content-between ms-5 ps-5">
+                <div class="col-5 mt-4 pt-4">
+                    <div class="row d-flex">
+                        <div class="col-2 ms-4">
+                            <i id="icon-img" class="fa-solid fa-cart-shopping text-danger"></i>
+                        </div>
+                        <div class="col-1">
+                            <i id="icon-img-2" class="ms-3 fa-solid fa-cart-shopping text-danger text-opacity-50"></i>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div>
+                            <h6 class="h6">Your Shopping Cart</h6>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div>
+                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste et consectetur quaerat temporibus nostrum debitis odio, dolores numquam necessitatibus ratione amet, pariatur molestiae aspernatur consequuntur hic repudiandae fugiat minima reiciendis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 mt-4 pt-4">
+                    <form action="" class="border-bottom pb-4" onsubmit="return order()">
+                        <table class="table table-borderless fs-6">
+                            <tr class="h6 text-secondary border-bottom">
+                                <th class="col-2">QTY</th>
+                                <th class="col-7">ITEM</th>
+                                <th class="col-3">PRICE</th>
+                            </tr>
+                            <tr class="h6">
+                                <td class="col-2">
+                                    <select name="" id="cake" onchange="birthdayCakes() , totalPrice()">
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </td>
+                                <td class="col-7">Birthday Cake</td>
+                                <td class="col-3">
+                                    <strong class="text-danger">$</strong><strong id="cakePrice" class="text-danger">0</strong>
+                                </td>
+                            </tr>
+                            <tr class="h6">
+                                <td class="col-2">
+                                    <select name="" id="cup" onchange="partyCups() , totalPrice()">
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </td>
+                                <td class="col-7">Party Cups</td>
+                                <td class="col-3">
+                                    <strong class="text-danger">$</strong><strong id="partyCupPrice" class="text-danger">0</strong>
+                                </td>
+                            </tr>
+                            <tr class="h6">
+                                <td class="col-2">
+                                    <select name="" id="beer" onchange="beerKegs() , totalPrice()">
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </td>
+                                <td class="col-7">Beer Kegs</td>
+                                <td class="col-3">
+                                    <strong class="text-danger">$</strong><strong id="beerPrice" class="text-danger">0</strong>
+                                </td>
+                            </tr>
+                            <tr class="h6">
+                                <td class="col-2">
+                                    <select name="" id="pound" onchange="beef() , totalPrice()">
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </td>
+                                <td class="col-7">Pound of Beef</td>
+                                <td class="col-3">
+                                    <strong class="text-danger">$</strong><strong id="poundPrice" class="text-danger">0</strong>
+                                </td>
+                            </tr>
+                            <tr class="h6">
+                                <td class="col-2">
+                                    <select name="" id="vest" onchange="bulletVest() , totalPrice()">
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </td>
+                                <td class="col-7">Bullet-Proof Vest</td>
+                                <td class="col-3">
+                                    <strong class="text-danger">$</strong><strong id="bulletPrice" class="text-danger">0</strong>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="row">
+                            <div class="col-9">
+                                <h6 class="h6 ps-2">Total: <strong class="text-danger">$</strong><strong id="total" class="text-danger">0</strong></h6>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-danger" type="submit">Order</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
+<script src="https://kit.fontawesome.com/39963a9d6f.js" crossorigin="anonymous"></script>
+</body>
+</html>
